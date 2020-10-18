@@ -22,8 +22,6 @@ def q2
 
 p array1 + array2
 
-
-
 end
 
 def q3
@@ -60,6 +58,15 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
+  # numbers1.each do |number|
+  #   p "#{number}0"
+  # end
+
+  numbers2 = numbers1.map{
+    |number| number * 10
+  }
+
+  p numbers2
  
 end
 
@@ -67,7 +74,7 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-
+  array.map!{|number| number.to_i}
   # 以下は変更しないで下さい
   p array
 end
