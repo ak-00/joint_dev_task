@@ -123,11 +123,15 @@ def q11
   # sports.each.with_index(1) do |sport, i|
   # puts "No#{i} #{sport}"
   # p sports.uniq
+  #   puts "ユーザーの趣味一覧"
+  # sport1 = sports.flatten
+  # sport1.uniq.each.with_index(1) do |sport, i|
+  #   puts "No#{i} #{sport}"
 
     puts "ユーザーの趣味一覧"
-  sport1 = sports.flatten
-  sport1.uniq.each.with_index(1) do |sport, i|
-    puts "No#{i} #{sport}"
+    sports.flatten!.uniq!.each.with_index(1) do |sport, i|
+      puts "No#{i} #{sport}"
+
   end 
 end
 
