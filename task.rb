@@ -157,7 +157,8 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-
+  key = data.keys
+  p key
 end
 
 def q15
@@ -165,7 +166,15 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-
+def check_include_age
+  if include?(:age)
+    puts "OK"
+  else
+    puts "NG"
+  end
+end
+  data1.check_include_age
+  data2.check_include_age
 end
 
 def q16
@@ -177,6 +186,9 @@ def q16
   ]
 
   # 以下に回答を記載
+  users.each do |value|
+    puts "私の名前は#{value[:name]}です。年齢は#{value[:age]}歳です。"
+  end
 
 end
 
