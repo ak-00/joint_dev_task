@@ -198,14 +198,23 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  attr_accessor :name
-  attr_accessor :age
-  attr_accessor :gender
 
   def initialize(name:, age:, gender:)
-    self.name = name
-    self.age = age
-    self.gender = gender
+    @name = name
+    @age = age
+    @gender = gender
+  end
+
+  def name
+    @name
+  end
+
+  def age
+    @age
+  end
+
+  def gender
+    @gender
   end
 
   def info
@@ -214,9 +223,9 @@ class UserQ17
     #  puts "性別：#{self.gender}"
 
     puts <<~TEXT
-    名前：#{self.name}
-    年齢：#{self.age}
-    性別：#{self.gender}
+    名前：#{@name}
+    年齢：#{@age}
+    性別：#{@gender}
     TEXT
 
   end
@@ -234,8 +243,8 @@ end
 
 class UserQ18
   # 以下に回答を記載
-#   attr_accessor = name
-#   attr_accessor = age
+#   attr_accessor :name
+#   attr_accessor :age
 
 # def initialize(name:, age:)
 #   self.name = name
@@ -243,12 +252,12 @@ class UserQ18
 # end
 
 # def introduce
-#     if  >= 20 
+#     if self.age >= 20 
 #       puts "こんにちは，#{self.name}と申します。宜しくお願いいたします。" 
 #     else  
 #       puts "はいさいまいど〜，#{self.name}です！！！"
 #     end
-# end
+#end
 
 
 end
@@ -264,10 +273,14 @@ end
 
 class Item
   # 以下を修正して下さい
+  # attr_accessor :name
 
-  def initialize(name)
-    @name = name
-  end
+  # def initialize(name:)
+  #   @name = name
+  # end
+  # def name
+  #   puts @name
+  # end
 end
 
 def q19
