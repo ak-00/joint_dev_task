@@ -258,11 +258,7 @@ end
 # end
 
 def introduce
-    if age >= 20 
-      puts "こんにちは，#{@name}と申します。宜しくお願いいたします。" 
-    else  
-      puts "はいさいまいど〜，#{@name}です！！！"
-    end
+    @age >= 20 ? "こんにちは，#{@name}と申します。宜しくお願いいたします。" : "はいさいまいど〜，#{@name}です！！！"
 end
 
 
@@ -279,13 +275,11 @@ end
 
 class Item
   # 以下を修正して下さい
-
+  attr_accessor :name
   def initialize(name:)
     @name = name
   end
-  def name
-    @name
-  end
+
 end
 
 def q19
