@@ -290,12 +290,43 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  attr_reader :name, :age
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age].to_i
+  end
 
 end
 
 class Zoo
   # 以下に回答を記載
+  def initialize(**params)
+    @infant = params[:entry_fee][:infant]
+    @children = params[:entry_fee][:children]
+    @adult = params[:entry_fee][:adult]
+    @senior = params[:entry_fee][:senior]
+  end
 
+  # 幼児(0〜5歳)，子供(6〜12歳)，成人(13〜64歳)，シニア(65〜120歳)の
+  def info_entry_fee(user)
+      entry_fee = case user.age
+        when 0..5
+          @infant
+        when 6..12
+          @children
+        when 13..64
+          @adult
+        when 65..120
+          @senior
+        end
+      puts "#{user.name}さんは#{entry_fee}円です。"
+  end
+      # elsif $age >= 6 and <= 12
+      #   puts "b"
+      # elsif $age >= 13 and <=64
+      #   puts "c"
+      # else $age >= 65 and <= 120
+      #   puts "d"
 end
 
 
